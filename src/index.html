@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>SAREA</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/svg" href="/textures/Images/SAREA.svg">
+</head>
+
+<body>
+    <div class="relative parent w-full h-full flex items-center justify-center">
+        <!-- Loading Screen -->
+        <div
+            class="loading-screen relative w-full h-full bg-[#060D20] flex items-center justify-center overflow-hidden z-200">
+            <img src="/textures/Images/background-img.png" alt="background"
+                class="absolute top-0 left-0 w-full h-full object-cover object-center opacity-50">
+            <!--  Loading Bar-->
+            <div
+                class="relative w-[314px] h-[314px] md:w-[469px] md:h-[469px] lg:w-[520px] lg:h-[520px] xl:w-[660px] xl:h-[660px]">
+                <!-- loading text area -->
+                <div
+                    class="lower-content-loading absolute top-[90%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] flex flex-col items-center justify-center gap-0">
+                    <div
+                        class="loading-percentage-text text-blue-500 font-[Koulen] font-normal uppercase text-[30px] md:text-[64.66px]">
+                        0%</div>
+                    <div
+                        class="loading-text text-white font-[Koulen] font-normal uppercase text-[30px] md:text-[64.66px]">
+                        Loading...</div>
+                </div>
+
+                <!-- Grey border -->
+                <div class="absolute inset-0 rounded-full border-[0.78px] border-white rotate-[-145deg]"
+                    style="mask:conic-gradient(black 0deg 292deg,transparent 292deg 360deg);-webkit-mask:conic-gradient(black 0deg 292deg,transparent 292deg 360deg);">
+                </div>
+
+                <!-- Track -->
+                <!-- Background arc -->
+                <div class="absolute inset-0 rounded-full rotate-[-145deg] arc-mask arc-thickness">
+                    <div class="absolute inset-0 rounded-full arc-bg"></div>
+                </div>
+
+                <!-- Progress arc -->
+                <div class="absolute inset-0 rounded-full rotate-[-145deg] arc-mask arc-thickness">
+                    <div class="absolute inset-0 rounded-full progress-arc"></div>
+                </div>
+
+                <!-- Logo -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                    <img src="/textures/Images/logo.png" alt="logo"
+                        class="logo-loading w-[263px] h-[132px] md:w-[406px] md:h-[224px] lg:w-[579px] lg:h-[289px]">
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div class="start-screen w-full h-full bg-[#060D20] z-200 flex">
+            <img src="/textures/Images/background-img.png" alt="logo"
+                class="absolute top-0 left-0 w-full h-full object-cover object-center opacity-50">
+            <img src="/textures/Images/logo.png" alt="logo" class="logo-start absolute top-[50%] md:top-[43%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-200 
+                w-[300px] h-[152px] md:w-[406px] md:h-[224px] lg:w-[950px] lg:h-[490px]">
+
+            <button
+                class="start-btn absolute bottom-[15%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-200 w-[202px] h-[50px] md:w-[302px] md:h-[75px] lg:w-[426px] lg:h-[106px] bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] md:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                <div
+                    class="btn-img w-[188px] h-[40px] md:w-[281px] md:h-[61px] lg:w-[396px] lg:h-[86px] bg-[url('/textures/Images/button-bg.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                    <div
+                        class="start-btn-text font-[Koulen] font-normal text-[39px] md:text-[58px] lg:text-[82.48px] text-center text-[#142340]">
+                        START
+                    </div>
+                </div>
+            </button>
+
+            <button
+                class="cart-btn-start flex items-center justify-center absolute top-[6%] right-[4%] md:top-[2.5%] md:right-[1.9%] bg-[#1B162A] border-[0.48px] border-white rounded-[2.86px] shadow-[0px_3.81px_0px_0px_#FFFFFF47] w-[42px] h-[42px] md:bg-[#1B162A] md:border-white md:rounded-[6px] md:shadow-[0px_8px_0px_0px_#FFFFFF47] md:w-[63px] md:h-[63px] lg:w-[90px] lg:h-[90px] z-200">
+                <img src="/textures/Images/cart.png" alt="cart-btn"
+                    class="lg:w-[53px] lg:h-[51px] md:w-[37px] md:h-[36px] w-[25px] h-[24px]">
+            </button>
+
+            <div
+                class="coins-ui-start flex items-center justify-around absolute top-[6%] left-[4%] md:left-auto md:top-[2.5%] md:right-[19%] lg:right-[16%] xl:right-[10%] w-[133px] h-[43px] md:w-[199px] md:h-[63px] lg:w-[280px] lg:h-[90px] bg-[#1B162A] border-white border-[0.48px] md-border-[0.71px] lg-border-[1px] rounded-[2.86px] md:rounded-[6px] z-200">
+                <img src="/textures/Images/dhiram.png" alt="coin-btn"
+                    class="lg:w-[55px] lg:h-[58px] md:w-[39px] md:h-[41px] w-[26px] h-[27px]">
+                <div
+                    class="coins-text font-[Koulen] font-normal text-[27px] md:text-[40px] lg:text-[57px] text-center uppercase text-[#FFFFFF]">
+                    9456
+                </div>
+            </div>
+        </div>
+
+        <!-- Pause Screen -->
+        <div
+            class="pause-screen w-full h-full backdrop-blur-[11.4px] bg-[#0000007d] z-201 hidden flex-col gap-6.5 items-center justify-center">
+            <button
+                class="resume-btn z-200 w-[202px] h-[50px] md:w-[302px] md:h-[75px] lg:w-[426px] lg:h-[106px] bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] md:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                <div
+                    class="btn-img w-[188px] h-[40px] md:w-[281px] md:h-[61px] lg:w-[396px] lg:h-[86px] bg-[url('/textures/Images/button-bg-1.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                    <div
+                        class="start-btn-text font-[Koulen] font-normal text-[39px] md:text-[58px] lg:text-[82.48px] text-center text-[#142340]">
+                        RESUME
+                    </div>
+                </div>
+            </button>
+
+            <button
+                class="home-btn-pause z-200 w-[202px] h-[50px] md:w-[302px] md:h-[75px] lg:w-[426px] lg:h-[106px] bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] md:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                <div
+                    class="btn-img w-[188px] h-[40px] md:w-[281px] md:h-[61px] lg:w-[396px] lg:h-[86px] bg-[url('/textures/Images/button-bg.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                    <div
+                        class="start-btn-text font-[Koulen] font-normal text-[39px] md:text-[58px] lg:text-[82.48px] text-center text-[#142340]">
+                        HOME
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <!-- confirm buy or play screen -->
+        <div
+            class="absolute shop-play-decision-screen w-full h-full backdrop-blur-[11.4px] bg-[#0000007d] z-205 hidden items-center justify-center">
+            <div
+                class="shop-play-decision-content  flex flex-col justify-center items-center gap-7 lg:gap-12 w-[390px] h-[275px] md:w-[553px] md:h-[370px] lg:w-[989px] lg:h-[375px] border-[2.89px] border-white bg-[#0E1A30]">
+                <div class="flex flex-col items-center justify-center gap-8">
+                    <div
+                        class="font-[Koulen] font-normal text-[17px] md:text-[25px] lg:text-[38px] text-center uppercase text-white">
+                        "Do you want to continue playing? This will reset your current coins to 0 Or do you want to
+                        redeem these coins for a coupon?"
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row md:gap-5.5 lg:gap-8.5 items-center justify-center gap-4">
+                    <button
+                        class="shop-btn-decision z-200 w-[202px] h-[50px] md:w-[282px] md:h-[70px] lg:w-[350px] lg:h-[85px] bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] lg:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                        <div
+                            class="btn-img w-[188px] h-[40px] md:w-[263px] md:h-[56px] lg:w-[328px] lg:h-[70px] bg-[url('/textures/Images/button-bg-1.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                            <div
+                                class="font-[Koulen] font-normal text-[39px] md:text-[54px] lg:text-[68.48px] text-center text-[#142340]">
+                                SHOP
+                            </div>
+                        </div>
+                    </button>
+
+                    <button
+                        class="play-btn-decision z-200 w-[202px] h-[50px] md:w-[282px] md:h-[70px] lg:w-[350px] lg:h-[85px] bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] lg:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                        <div
+                            class="btn-img w-[188px] h-[40px] md:w-[263px] md:h-[56px] lg:w-[328px] lg:h-[70px] bg-[url('/textures/Images/button-bg.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                            <div
+                                class="yes-btn-text font-[Koulen] font-normal text-[39px] md:text-[54px] lg:text-[68.48px] text-center text-[#142340]">
+                                PLAY
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirm purchase screen -->
+        <div
+            class="absolute confirm-purchase-screen w-full h-full backdrop-blur-[11.4px] bg-[#0000007d] z-205 hidden items-center justify-center">
+            <div
+                class="confirm-screen-content flex flex-col gap-7 lg:gap-12 w-[390px] h-[275px] md:w-[553px] md:h-[370px] lg:w-[989px] lg:h-[375px] border-[2.89px] border-white bg-[#0E1A30]">
+                <div class="top-section flex flex-col items-center justify-center gap-8">
+                    <button
+                        class="back-btn-confirm-purchase bg-white w-[94px] h-[27px] md:w-[131px] md:h-[33px] lg:w-[164px] lg:h-[47px] flex items-center justify-evenly align-middle self-start border border-[#FFFFFF]">
+                        <img src="/textures/Images/back-btn-img.png" alt="back-btn"
+                            class="w-[18px] h-[18px] md:w-[25px] md:h-[25px] lg:w-[32px] lg:h-[32px]">
+                        <div
+                            class="confirm-purchase-back-btn-text font-[Koulen] text-[16.98px] md:text-[22.5px] lg:text-[29px] text-center font-normal">
+                            SHOP</div>
+                    </button>
+
+                    <div
+                        class="confirm-text-ques font-[Koulen] font-normal text-[22.84px] md:text-[31px] lg:text-[48px] text-center uppercase text-white">
+                        Are you sure want to buy this?
+                    </div>
+                </div>
+
+                <div
+                    class="bottom-section flex flex-col lg:flex-row md:gap-5.5 lg:gap-8.5 items-center justify-center gap-4">
+                    <button
+                        class="cancel-btn z-200 w-[202px] h-[50px] md:w-[282px] md:h-[70px] lg:w-[426px] lg:h-[106px] bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] lg:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                        <div
+                            class="btn-img w-[188px] h-[40px] md:w-[263px] md:h-[56px] lg:w-[396px] lg:h-[86px] bg-[url('/textures/Images/button-bg-1.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                            <div
+                                class="cancel-btn-text font-[Koulen] font-normal text-[39px] md:text-[54px] lg:text-[82.48px] text-center text-[#142340]">
+                                CANCEL
+                            </div>
+                        </div>
+                    </button>
+
+                    <button
+                        class="yes-btn z-200 w-[202px] h-[50px] md:w-[282px] md:h-[70px] lg:w-[426px] lg:h-[106px] bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] lg:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                        <div
+                            class="btn-img w-[188px] h-[40px] md:w-[263px] md:h-[56px] lg:w-[396px] lg:h-[86px] bg-[url('/textures/Images/button-bg.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                            <div
+                                class="yes-btn-text font-[Koulen] font-normal text-[39px] md:text-[54px] lg:text-[82.48px] text-center text-[#142340]">
+                                YES
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start coupon display screen -->
+        <div
+            class="hidden absolute start-coupon-screen w-full h-full backdrop-blur-[11.4px] bg-[#0000007d] z-202 items-center justify-center">
+            <div
+                class="start-coupon-screen-content flex flex-col gap-7 lg:gap-5 w-[390px] h-[210px] md:w-[553px] md:h-[250px] lg:w-[989px] lg:h-[300px] border-[2.89px] border-white bg-[#0E1A30]">
+                <button
+                    class="back-btn-start-coupon bg-white w-[94px] h-[27px] md:w-[131px] md:h-[33px] lg:w-[164px] lg:h-[47px] flex items-center justify-evenly align-middle self-start border border-[#FFFFFF]">
+                    <img src="/textures/Images/back-btn-img.png" alt="back-btn"
+                        class="w-[18px] h-[18px] md:w-[25px] md:h-[25px] lg:w-[32px] lg:h-[32px]">
+                    <div
+                        class="back-btn-text font-[Koulen] text-[16.98px] md:text-[22.5px] lg:text-[29px] text-center font-normal">
+                        Back</div>
+                </button>
+                <div class="top-section-start-coupon flex flex-col items-center justify-center gap-8">
+                    <div
+                        class="start-coupon-text font-[Koulen] font-normal text-[22.84px] md:text-[31px] lg:text-[48px] text-center uppercase text-white">
+                        Yay you got a 5% discount coupon
+                    </div>
+                </div>
+
+                <div
+                    class="bottom-section-start-coupon inline [stroke-dasharray:7_0] font-[Koulen] font-normal text-[22.84px] md:text-[31px] lg:text-[48px] text-center uppercase text-white">
+                    Coupon Code - <span
+                        class="coupon-code border-2 border-dashed border-white px-4 bg-[#FFFFFF2B]">CLEVISCO5</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coins collect screen -->
+        <div
+            class="coins-collect-screen w-full h-full backdrop-blur-[11.4px] bg-[#0000007d] z-200 hidden items-center justify-center">
+            <div
+                class="coins-collect-screen-content flex flex-col items-center justify-around w-[365px] h-[490px] md:w-[703px] md:h-[680px] lg:w-[960px] lg:h-[730px] border-[2.89px] border-white bg-[#0E1A30]">
+                <!-- Top Section -->
+                <div
+                    class="top-section-wrapper w-full flex flex-col items-center justify-center h-[22%] md:h-[12%] lg:h-[14%]">
+                    <div
+                        class="top-section-coins font-[Koulen] font-normal text-[35px] md:text-[60px] lg:text-[75px] text-white text-center">
+                        COINS COLLECTED
+                    </div>
+
+                    <div
+                        class="font-[Koulen] w-[90%] text-[15px] md:text-[20px] lg:text-[25px] text-[#ec5f5f] text-center">
+                        Coins will be reset to '0' if not Redeemed
+                    </div>
+                </div>
+
+                <!-- Middle Section -->
+                <div
+                    class="middle-section-wrapper w-full flex items-center justify-center h-[37%] md:h-[31%] lg:h-[40%]">
+                    <div
+                        class="middle-section-coins w-[142px] h-[142px] md:w-[212px] md:h-[212px] lg:w-[300px] lg:h-[300px] bg-[url('/textures/Images/rectangle41.png')] bg-no-repeat bg-center bg-cover relative flex flex-col">
+                        <div
+                            class="coin-middle-upper relative w-full h-[73%] flex items-center justify-center overflow-hidden">
+                            <img src="/textures/Images/vector-1.png" alt="" class="opacity-100 mix-blend-overlay" />
+                            <img src="/textures/Images/dhiram.png" alt="coin"
+                                class="absolute w-[75px] h-[79px] md:w-[112px] md:h-[118px] lg:w-[158px] lg:h-[168px]" />
+                        </div>
+
+                        <div
+                            class="coin-middle-lower-coin-text w-full h-[27%] bg-[url('/textures/Images/rectangle-42.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center font-[Koulen] font-normal text-[28px] md:text-[42px] lg:text-[60px] text-center text-white">
+                            9456
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Section -->
+                <div class="bottom-section-wrapper w-full flex items-center justify-center h-[53%] md:h-[27%] lg:h-[27%]">
+                    <div
+                        class="bottom-section-coins w-full h-full flex flex-col md:flex-row lg:flex-row items-center justify-center gap-4 md:gap-8 lg:gap-x-12 flex-wrap">
+                        <!-- Home Button -->
+                        <button
+                            class="home-btn-coins z-200 w-[202px] h-[50px] md:w-[302px] md:h-[75px]  bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] md:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                            <div
+                                class="btn-img w-[188px] h-[40px] md:w-[281px] md:h-[61px]  bg-[url('/textures/Images/button-bg-1.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                                <div
+                                    class="start-btn-text font-[Koulen] font-normal text-[39px] md:text-[58px]  text-center text-[#142340]">
+                                    HOME
+                                </div>
+                            </div>
+                        </button>
+
+                        <!-- Play Again Button -->
+                        <button
+                            class="play-again-btn-coins z-200 w-[202px] h-[50px] md:w-[302px] md:h-[75px]  bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] md:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                            <div
+                                class="btn-img w-[188px] h-[40px] md:w-[281px] md:h-[61px]  bg-[url('/textures/Images/button-bg.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                                <div
+                                    class="start-btn-text font-[Koulen] font-normal text-[39px] md:text-[58px]  text-center text-[#142340]">
+                                    PLAY AGAIN
+                                </div>
+                            </div>
+                        </button>
+
+                        <button
+                            class="cart-btn-coins-collect z-200 w-[202px] h-[50px] md:w-[302px] md:h-[75px]  bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] md:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+                            <div
+                                class="btn-img w-[188px] h-[40px] md:w-[281px] md:h-[61px]  bg-[url('/textures/Images/button-bg.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+                                <div
+                                    class="start-btn-text font-[Koulen] font-normal text-[39px] md:text-[58px] text-center text-[#142340]">
+                                    SHOP
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- timer UI -->
+        <div
+            class="timer-ui hidden absolute w-[43px] h-[43px] md:w-[63px] md:h-[63px] lg:w-[84px] lg:h-[84px] rounded-full border-[3px] border-white z-200 bg-[#1B162A]">
+            <div id="ring" class="absolute inset-0 rounded-full z-201"></div>
+            <img src="/textures/Images/wrench-icon.png" id="timerIcon"
+                class="absolute top-1/2 left-1/2 w-[23px] h-[23px] md:w-[34px] md:h-[34px] lg:w-[48px] lg:h-[48px] -translate-x-1/2 -translate-y-1/2 z-202" />
+        </div>
+
+        <!-- coins ui gameplay -->
+        <div
+            class="coins-ui-gameplay hidden items-center justify-around absolute top-[6%] md:top-[7%] md:left-auto md:right-[3%] left-[3%] lg:left-auto lg:right-[3%] translate-y-[-50%] w-[133px] h-[43px] md:w-[199px] md:h-[63px] lg:w-[280px] lg:h-[90px] bg-[#1B162A] border-white border-[0.48px] md-border-[0.71px] lg-border-[1px] rounded-[2.86px] md:rounded-[6px] z-199">
+            <img src="/textures/Images/dhiram.png" alt="coin-btn"
+                class="lg:w-[55px] lg:h-[58px] md:w-[39px] md:h-[41px] w-[26px] h-[27px]">
+            <div
+                class="coins-text-gameplay font-[Koulen] font-normal text-[27px] md:text-[40px] lg:text-[57px] text-center uppercase text-[#FFFFFF]">
+                9456
+            </div>
+        </div>
+
+        <!-- Pause Button -->
+        <button
+            class="pause-btn-gameplay flex items-center justify-center absolute translate-y-[-50%] top-[6%] right-[4%] md:top-[7%] md:left-[1.9%] bg-[#1B162A] border-[0.48px] border-white rounded-[2.86px] shadow-[0px_3.81px_0px_0px_#FFFFFF47] w-[42px] h-[42px] md:bg-[#1B162A] md:border-white md:rounded-[6px] md:shadow-[0px_8px_0px_0px_#FFFFFF47] md:w-[63px] md:h-[63px] lg:w-[90px] lg:h-[90px] z-199">
+            <img src="/textures/Images/pause.png" alt="pause-btn"
+                class="lg:w-[39px] lg:h-[51px] md:w-[27px] md:h-[36px] w-[18px] h-[24px]">
+        </button>
+
+        <!-- Health Bar -->
+        <div
+            class="energy-bar absolute top-[12%] md:top-[14%] lg:top-[8%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[400px] h-[28px] md:w-[533px] md:h-[32px] lg:w-[750px] lg:h-[40px] bg-black border border-white rounded-[6px] hidden items-center justify-center z-199">
+            <div class="wrapper w-[98%] h-full relative flex items-center justify-center">
+                <!-- Blue layer (max capacity) -->
+                <div
+                    class="current-max-mask absolute left-0 w-full h-[60%] overflow-hidden flex items-center justify-center">
+                    <div class="current-max absolute left-0 top-0 w-full h-full bg-[#979797]"></div>
+                    <span
+                        class="current-max-text absolute text-[#ffffff] text-center font-[Koulen] font-normal text-[16.97px] md:text-[16.77px] lg:text-[16.77px] uppercase translate-y-[0.5px] md:translate-y-px">
+                        100
+                    </span>
+                </div>
+                <!-- Green layer (current charge) -->
+                <div
+                    class="current-charge absolute left-0 w-[27%] h-[60%] bg-[#00ce0a] flex items-center justify-center">
+                    <span
+                        class="current-charge-text translate-y-[0.5px] md:translate-y-px text-[#3F3F3F] text-center font-[Koulen] font-normal text-[16.97px] md:text-[16.77px] lg:text-[16.77px] uppercase">
+                        27
+                    </span>
+                </div>
+            </div>
+            <div
+                class="absolute item-collect-ui-display top-full w-max h-[30px] md:h-[30px] hidden items-center justify-center gap-3 bg-[url('/textures/Images/button-bg-1.png')] bg-no-repeat bg-center bg-cover transform-[scaleY(-1)] px-3">
+
+                <span
+                    class="item-collected-left text-[#000000] text-center font-[Koulen] font-normal text-[12.97px] md:text-[11.77px] lg:text-[16.77px] uppercase transform-[scaleY(-1)]">
+                    <!-- Left text -->Energy Bar Efficiency code
+                </span>
+
+                <span
+                    class="item-collected-right text-[#000000] text-center font-[Koulen] font-normal text-[12.97px] md:text-[11.77px] lg:text-[16.77px] uppercase transform-[scaleY(-1)]">
+                    <!-- Right text -->Energy Bar Efficiency code
+                </span>
+            </div>
+        </div>
+
+        <!-- Shop screen -->
+        <div class="shop-screen w-full h-full bg-[#060D20] hidden items-center justify-center z-200">
+            <img src="/textures/Images/background-img.png" alt="background"
+                class="absolute top-0 left-0 w-full h-full object-cover object-center opacity-50">
+            <div
+                class="shop-content relative w-[370px] h-[375px] md:w-[500px] md:h-[340px] lg:w-[700px] lg:h-[350px] bg-[#0E1A30] border-white border-[2.8px] md:border-[5px]">
+                <button
+                    class="shop-back-btn absolute top-0 left-0 bg-white w-[94px] h-[27px] md:w-[131px] md:h-[33px] lg:w-[164px] lg:h-[47px] flex items-center justify-evenly border border-[#FFFFFF]">
+                    <img src="/textures/Images/back-btn-img.png" alt="back-btn"
+                        class="w-[18px] h-[18px] md:w-[25px] md:h-[25px] lg:w-[32px] lg:h-[32px]">
+                    <div
+                        class="shop-back-btn-text font-[Koulen] text-[16.98px] md:text-[22.5px] lg:text-[29px] text-center font-normal">
+                        BACK</div>
+                </button>
+
+                <div
+                    class="coupon-cards-wrapper absolute top-[53%] md:top-[55%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[90%] h-[80%] md:w-[95%] flex flex-wrap items-center justify-center gap-4 overflow-x-clip overflow-y-auto">
+                    <div
+                        class="coupon-card-container w-[128px] h-[128px] md:w-[142px] md:h-[142px] lg:w-[196px] lg:h-[188px] bg-[#1B162A] border-[0.58px] border-white rounded-[3.5px] md:rounded-[3.5px] lg:rounded-[5.3px]">
+                        <div
+                            class="card-content w-full h-full flex flex-col items-center justify-center gap-3 md-gap-6">
+                            <div class="coupon-image-container 
+                                w-[103px] h-[55px]              
+                                md:w-[125px] md:h-[62px]        
+                                lg:w-[147px] lg:h-[73px]       
+                                flex items-center justify-center gap-[0.5px]">
+
+                                <div class="w-[70%] h-full">
+                                    <img src="/textures/Images/blue-bg-coupon.png" class="w-full h-full object-fill">
+                                </div>
+
+                                <div class="relative w-[30%] h-full flex items-center justify-center">
+                                    <img src="/textures/Images/green-bg-coupon.png"
+                                        class="absolute w-full h-full object-fill">
+                                    <div
+                                        class="discount-percent-text relative w-fit h-fit whitespace-nowrap -rotate-90 z-1 text-[#00663A] text-center font-[Koulen] font-normal text-[12px] md:text-[14.5px] uppercase">
+                                        Save 5%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="coupon-buy-btn z-200 
+                                w-[85px] h-[30px]               
+                                md:w-[102px] md:h-[35px]       
+                                lg:w-[120px] lg:h-[41px]       
+                                bg-[#1B162A] border border-[#FFFFFF] rounded-[3px] md:rounded-[6px]
+                                shadow-[0px_3.8px_0px_0px_#FFFFFF47] md:shadow-[0px_8px_0px_0px_#FFFFFF47]
+                                flex items-center justify-center">
+
+                                <div class="relative btn-img w-full h-full flex items-center justify-center gap-4">
+
+                                    <img src="/textures/Images/button-bg.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                                        w-[90%] h-[80%] object-fill">
+
+                                    <img src="/textures/Images/dhiram.png" class="z-1 
+                                        w-[14px] h-[14px]          
+                                        md:w-[17px] md:h-[17px]    
+                                        lg:w-[20px] lg:h-[20px]    
+                                        object-cover">
+
+                                    <span class="coupon-price-text z-1 h-[96%] text-[#142340] text-center font-[Koulen] font-normal 
+                                        text-[18.98px] md:text-[22.5px] lg:text-[27px]">
+                                        100
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute top-[105%] left-[50%] w-full -translate-x-1/2  font-[Koulen] font-normal text-[16px] md:text-[20px] lg:text-[26px] text-center uppercase text-[#FFFFFF]">
+                    Earn more coins to get coupons at <a href="https://clevisco.ae/" target="_blank"
+                        rel="noopener noreferrer" class="text-[#45a0f5]">Clevisco.AE</a>
+                </div>
+            </div>
+
+            <div
+                class="coins-ui-shop flex items-center justify-around absolute top-[6%] left-[4%] md:left-auto md:top-[2.5%] md:right-[2%] lg:right-[2%] xl:right-[2%] w-[133px] h-[43px] md:w-[199px] md:h-[63px] lg:w-[280px] lg:h-[90px] bg-[#1B162A] border-white border-[0.48px] md-border-[0.71px] lg-border-[1px] rounded-[2.86px] md:rounded-[6px] z-200">
+                <img src="/textures/Images/dhiram.png" alt="coin-btn"
+                    class="lg:w-[55px] lg:h-[58px] md:w-[39px] md:h-[41px] w-[26px] h-[27px]">
+                <div
+                    class="coins-text font-[Koulen] font-normal text-[27px] md:text-[40px] lg:text-[57px] text-center uppercase text-[#FFFFFF]">
+                    9456
+                </div>
+            </div>
+
+            <a href="https://wa.me/971585068253?text=My%20game%20coupon%20does%20not%20work,%20please%20help."
+                target="_blank" rel="noopener noreferrer"
+                class="absolute right-[5%] bottom-[5%] group inline-flex items-center justify-center rounded-full bg-(--wa-green,#25D366) text-white shadow-lg
+               w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 z-200
+               transition-transform transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-[rgba(37,211,102,0.25)]"
+                title="WhatsApp">
+
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10" viewBox="0 0 24 24" fill="none"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="white" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.373 0 .007 5.372.007 12 0 13.996.375 15.9 1.09 17.6L0 24l6.6-1.09A11.94 11.94 0 0 0 12 24c6.627 0 12-5.372 12-12 0-1.62-.313-3.164-.98-4.52zM12 22.08c-1.81 0-3.55-.5-5.07-1.44l-.36-.21-3.92.65.66-3.82-.23-.38A9.02 9.02 0 0 1 2.92 12C2.92 6.34 7.34 1.92 13 1.92c5.66 0 10.08 4.42 10.08 10.08 0 5.66-4.42 10.08-10.08 10.08z" />
+                    <path fill="white"
+                        d="M17.11 14.06c-.29-.15-1.72-.85-1.99-.95-.27-.1-.47-.15-.67.15-.2.29-.77.95-.95 1.14-.17.2-.35.22-.64.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.7-1.61-1.99-.17-.29-.02-.45.13-.6.14-.14.29-.35.43-.52.14-.17.19-.29.29-.48.1-.19.05-.38-.02-.52-.07-.14-.67-1.62-.92-2.22-.24-.58-.48-.5-.66-.51l-.56-.01c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.42 0 1.41 1.03 2.77 1.17 2.96.14.19 2.02 3.08 4.9 4.32 1.35.57 1.9.9 2.56.41.66-.49 2.26-2.07 2.58-2.84.32-.78.32-1.45.22-1.58-.1-.13-.26-.19-.55-.34z" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Coupon show screen -->
+        <div class="absolute coupon-show-screen w-full h-full bg-[#060D20] hidden items-center justify-center z-205">
+
+            <a href="https://wa.me/971585068253?text=My%20game%20coupon%20does%20not%20work,%20please%20help."
+                target="_blank" rel="noopener noreferrer"
+                class="absolute right-[5%] bottom-[5%] group inline-flex items-center justify-center rounded-full bg-(--wa-green,#25D366) text-white shadow-lg
+               w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 z-200
+               transition-transform transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-[rgba(37,211,102,0.25)]"
+                title="WhatsApp">
+
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10" viewBox="0 0 24 24" fill="none"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="white" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.373 0 .007 5.372.007 12 0 13.996.375 15.9 1.09 17.6L0 24l6.6-1.09A11.94 11.94 0 0 0 12 24c6.627 0 12-5.372 12-12 0-1.62-.313-3.164-.98-4.52zM12 22.08c-1.81 0-3.55-.5-5.07-1.44l-.36-.21-3.92.65.66-3.82-.23-.38A9.02 9.02 0 0 1 2.92 12C2.92 6.34 7.34 1.92 13 1.92c5.66 0 10.08 4.42 10.08 10.08 0 5.66-4.42 10.08-10.08 10.08z" />
+                    <path fill="white"
+                        d="M17.11 14.06c-.29-.15-1.72-.85-1.99-.95-.27-.1-.47-.15-.67.15-.2.29-.77.95-.95 1.14-.17.2-.35.22-.64.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.7-1.61-1.99-.17-.29-.02-.45.13-.6.14-.14.29-.35.43-.52.14-.17.19-.29.29-.48.1-.19.05-.38-.02-.52-.07-.14-.67-1.62-.92-2.22-.24-.58-.48-.5-.66-.51l-.56-.01c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.42 0 1.41 1.03 2.77 1.17 2.96.14.19 2.02 3.08 4.9 4.32 1.35.57 1.9.9 2.56.41.66-.49 2.26-2.07 2.58-2.84.32-.78.32-1.45.22-1.58-.1-.13-.26-.19-.55-.34z" />
+                </svg>
+            </a>
+
+            <img src="/textures/Images/background-img.png" alt="background"
+                class="absolute top-0 left-0 w-full h-full object-cover object-center opacity-50">
+            <div
+                class="coupon-screen-content relative flex flex-col justify-center items-center w-[370px] h-[335px] md:w-[550px] md:h-[340px] lg:w-[914px] lg:h-[418px] bg-[#0E1A30] border-white border-[2.8px] md:border-[5px]">
+                <button
+                    class="go-back-coupon-btn absolute top-0 left-0 bg-white w-[94px] h-[27px] md:w-[131px] md:h-[33px] lg:w-[164px] lg:h-[47px] flex items-center justify-evenly border border-[#FFFFFF]">
+                    <img src="/textures/Images/back-btn-img.png" alt="back-btn"
+                        class="w-[18px] h-[18px] md:w-[25px] md:h-[25px] lg:w-[32px] lg:h-[32px]">
+                    <div
+                        class="go-back-coupon-btn-text font-[Koulen] text-[16.98px] md:text-[22.5px] lg:text-[29px] text-center font-normal">
+                        GO BACK
+                    </div>
+                </button>
+
+                <div class="top-coupon-container w-full h-[55%] flex justify-center items-center">
+                    <div
+                        class="coupon-screen-image-container w-full h-full flex items-center justify-center gap-[0.5px]">
+
+                        <div
+                            class="coupon-screen-coupon-img-left w-[185px] h-[122px] md:w-[203px] md:h-[133px] lg:w-[278px] lg:h-[183px] flex items-center justify-center bg-[url('/textures/Images/blue-bg-coupon.png')] bg-no-repeat bg-cover">
+                        </div>
+
+                        <div
+                            class="coupon-screen-coupon-img-right w-[60px] h-[122px] md:w-[75px] md:h-[133px] lg:w-[90px] lg:h-[183px] flex items-center justify-center  bg-[url('/textures/Images/green-bg-coupon.png')] bg-no-repeat bg-cover">
+                            <div
+                                class="discount-percent-text-coupon-screen relative -rotate-90 z-1 text-[#00663A] text-center font-[Koulen] font-normal text-[18px] md:text-[25px] lg:text-[27px] uppercase">
+                                Save 5%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bottom-coupon-container w-full h-[34%] flex flex-row items-center justify-center gap-5 md:gap-10">
+                    <div
+                        class="coupon-code-container bg-[#FFFFFF2B] h-[35px] md:h-[45px] lg:h-[67px] border-2 border-dashed border-white [stroke-dasharray:7_0] flex items-center justify-center">
+                        <span
+                            class="coupon-code-text text-[#ffffff]  text-center font-[Koulen] font-normal text-[15px] md:text-[22.5px] lg:text-[44px] px-4 md:px-4 lg:px-8">
+                            Arouureantouhis215AD23
+                        </span>
+                    </div>
+
+                    <button
+                        class="copy-code-btn z-200  w-[150px] h-[40px] md:w-[200px] md:h-[45px] lg:w-[243px] lg:h-[67px] bg-[#1B162A] border border-[#FFFFFF] rounded-[6px] shadow-[0px_3.8px_0px_0px_#FFFFFF47] md:shadow-[0px_8px_0px_0px_#FFFFFF47] flex items-center justify-center">
+
+                        <div
+                            class="btn-img-coupon-screen  w-[135px] h-[28px] md:w-[180px] md:h-[30px] lg:w-[233px] lg:h-[51px] bg-[url('/textures/Images/button-bg.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center">
+
+                            <div
+                                class="copy-code-btn-text  text-[20px] md:text-[25.5px] lg:text-[44px] font-[Koulen] font-normal text-center text-[#142340]">
+                                COPY CODE
+                            </div>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <canvas class="webgl"></canvas>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>

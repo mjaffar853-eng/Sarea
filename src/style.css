@@ -1,0 +1,265 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Komikazoom';
+    src: url('/fonts/KAMIKZOM.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Koulen';
+    src: url('/fonts/KOULEN.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@layer utilities {
+    .arc-mask {
+        mask: radial-gradient(farthest-side, transparent calc(100% - var(--arc-thickness)), black 0);
+        -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--arc-thickness)), black 0);
+    }
+
+    .arc-bg {
+        background: conic-gradient(rgba(60, 60, 80, 0.4) 0deg 292deg, transparent 292deg 360deg);
+    }
+
+    .progress-arc {
+        background: conic-gradient(#CFFA52 var(--start, 0deg) calc(var(--start, 0deg) + var(--deg, 0deg)),
+                transparent calc(var(--start, 0deg) + var(--deg, 0deg)) 360deg);
+        transition: background 0.1s linear;
+    }
+
+    .arc-thickness {
+        --arc-thickness: 22px;
+    }
+
+    @media (max-width: 480px) {
+        .arc-thickness {
+            --arc-thickness: 15px;
+        }
+    }
+}
+
+* {
+    margin: 0;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: none;
+}
+
+/* .loading-screen, */
+.energy-bar,
+.start-screen,
+.coins-collect-screen .pause-screen {
+    display: none;
+}
+
+.webgl {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    touch-action: none;
+}
+
+button {
+    cursor: pointer !important;
+}
+
+@media (max-width: 392px) {
+
+    .confirm-screen-content,
+    .coins-collect-screen-content,
+    .energy-bar,
+    .coupon-screen-content,
+    .shop-play-decision-content {
+        width: 325px;
+    }
+
+    .energy-bar {
+        height: 28px;
+    }
+
+    .current-max-text,
+    .current-charge-text {
+        font-size: 14.5px;
+    }
+
+    .start-coupon-screen {
+        width: 325px;
+    }
+
+    .shop-content {
+        width: 325px;
+        height: 400px;
+    }
+
+    .coupon-card-container {
+        width: 90px;
+        height: 88px;
+    }
+
+    .coupon-card-container {
+        width: 125px;
+        height: 125px;
+    }
+
+    .card-content {
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+    }
+
+    .coupon-image-container {
+        gap: 0.5px;
+        width: 110px;
+        height: 55px;
+    }
+
+    .discount-percent-text {
+        font-size: 12px;
+    }
+
+    .coupon-buy-btn {
+        width: 102px;
+        height: 35px;
+    }
+
+    .coupon-price-text {
+        font-size: 22px;
+    }
+
+    .coupon-screen-coupon-img-left {
+        width: 185px;
+        height: 122px;
+    }
+
+    .coupon-screen-coupon-img-right {
+        width: 60px;
+        height: 122px;
+    }
+
+    .discount-percent-text-coupon-screen {
+        font-size: 18px;
+    }
+
+    .coupon-code-text {
+        font-size: 12px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .copy-code-btn {
+        width: 130px;
+        height: 35px;
+    }
+
+    .btn-img-coupon-screen {
+        width: 118px;
+        height: 24px;
+    }
+
+    .copy-code-btn-text {
+        font-size: 17px;
+    }
+}
+
+.coupon-buy-btn[disabled],
+.coupon-buy-btn[disabled] * {
+    cursor: not-allowed !important;
+}
+
+@media (min-width: 647px) and (max-width: 860px) {
+    .shop-content {
+        width: 540px;
+        height: 260px;
+    }
+
+    .coupon-card-container {
+        width: 140px;
+        height: 140px;
+    }
+
+    .coupon-buy-btn {
+        border-radius: 3px;
+    }
+
+    .coupon-price-text {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+
+    /* coins UI */
+    .coins-ui-gameplay {
+        width: 199px;
+        height: 63px;
+    }
+
+    .coins-ui-gameplay img {
+        width: 39px;
+        height: 41px;
+    }
+
+    .coins-text-gameplay {
+        font-size: 40px;
+    }
+
+    .pause-btn-gameplay {
+        width: 63px;
+        height: 63px;
+    }
+
+    .pause-btn-gameplay img {
+        width: 27px;
+        height: 36px;
+    }
+
+    /* health bar */
+    .energy-bar {
+        width: 533px;
+        height: 34px;
+    }
+
+    .energy-bar .current-max-text,
+    .energy-bar .current-charge-text {
+        font-size: 11.77px;
+    }
+}
+
+#startCountdownContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.countdown-text {
+    font-size: clamp(48px, 8vw, 120px);
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: scale(0.5);
+}
