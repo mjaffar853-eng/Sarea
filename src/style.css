@@ -241,6 +241,10 @@ button {
     .energy-bar .current-charge-text {
         font-size: 11.77px;
     }
+
+    .start-coupon-screen-content {
+        width: 965px;
+    }
 }
 
 #startCountdownContainer {
