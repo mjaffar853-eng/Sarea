@@ -22,7 +22,7 @@ export default class Camera {
     }
     
     setInstance() {
-        const fov = window.innerWidth < 500 ? 40 : 30 
+        const fov = window.innerWidth < 550 ? 40 : 30 
 
         this.instance = new THREE.PerspectiveCamera(
             fov,
@@ -61,7 +61,6 @@ export default class Camera {
             duration: 0,
             ease: 'power2.out'
         })
-
         this.instance.lookAt(this.instance.position.x, playerPosition.y, playerPosition.z - 2.5)
     }
 
