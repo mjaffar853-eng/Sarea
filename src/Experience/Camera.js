@@ -20,9 +20,9 @@ export default class Camera {
             this.instance.position.z
         )
     }
-    
+
     setInstance() {
-        const fov = window.innerWidth < 550 ? 40 : 30 
+        const fov = window.innerWidth < 500 ? 44 : 30
 
         this.instance = new THREE.PerspectiveCamera(
             fov,
@@ -30,7 +30,7 @@ export default class Camera {
             0.5,
             80
         )
-        this.instance.position.set(0, 1, 3)
+        this.instance.position.set(0, 0.85, 3)
         this.scene.add(this.instance)
     }
 
@@ -40,7 +40,7 @@ export default class Camera {
     }
 
     resize() {
-        this.instance.fov = window.innerWidth < 500 ? 40 : 30
+        this.instance.fov = window.innerWidth < 500 ? 44 : 30
         this.instance.aspect = this.sizes.width / this.sizes.height
         this.instance.updateProjectionMatrix()
     }
@@ -61,6 +61,7 @@ export default class Camera {
             duration: 0,
             ease: 'power2.out'
         })
+
         this.instance.lookAt(this.instance.position.x, playerPosition.y, playerPosition.z - 2.5)
     }
 
